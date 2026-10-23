@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "[ \"$CLAUDE_CODE_REMOTE\" = true ] || exit 0; echo \"export PATH=$(nix develop -c printenv PATH)\" >> \"$CLAUDE_ENV_FILE\" && . \"$CLAUDE_ENV_FILE\" && cargo build"
+            "command": "[ \"$CLAUDE_CODE_REMOTE\" = true ] || exit 0; p=$(nix develop -c printenv PATH) && echo \"export PATH=$p\" >> \"$CLAUDE_ENV_FILE\" && PATH=$p cargo build"
           }
         ]
       }
