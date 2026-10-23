@@ -1,10 +1,7 @@
 {
-  inputs = {
-    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?ref=nixpkgs-unstable&shallow=1";
-    rust-overlay = {
-      url = "git+https://github.com/oxalica/rust-overlay?shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+  inputs.rust-overlay = {
+    url = "git+https://github.com/oxalica/rust-overlay";
+    inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =

@@ -3,18 +3,14 @@
     "nixpkgs": {
       "locked": {
         "lastModified": 1792506237,
-        "narHash": "sha256-Q/8KLB6jNfpaUN1HAedE/u/Et9feE/zYSsutBLKrCFk=",
-        "ref": "nixpkgs-unstable",
+        "narHash": "sha256-hVMDyAXU0kxRuG3GygbZkzf5x+aBNEC0NYEJ6KwHtD4=",
         "rev": "5adc50831c259f87faeb09ddf930d43597197473",
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/NixOS/nixpkgs"
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1097770.5adc50831c25/nixexprs.tar.zst"
       },
       "original": {
-        "ref": "nixpkgs-unstable",
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/NixOS/nixpkgs"
+        "id": "nixpkgs",
+        "type": "indirect"
       }
     },
     "root": {
@@ -30,16 +26,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1792653800,
-        "narHash": "sha256-E8zFJilWlORqzIUJizyhZ/0WKBOizuM6s1nRSgPRomo=",
+        "lastModified": 1792739799,
+        "narHash": "sha256-M2rr/yPbTHvgAzCyZ+zHJHflFM0XU7t42Sw2skA3TQM=",
         "ref": "refs/heads/master",
-        "rev": "5f267b7f323a4d6df0b9c0e3eaa043cbe85386f2",
-        "shallow": true,
+        "rev": "b0829a2cc9f7b596583331d78a942c1e5170d8a0",
+        "revCount": 2345,
         "type": "git",
         "url": "https://github.com/oxalica/rust-overlay"
       },
       "original": {
-        "shallow": true,
         "type": "git",
         "url": "https://github.com/oxalica/rust-overlay"
       }
