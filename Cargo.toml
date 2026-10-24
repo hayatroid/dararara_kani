@@ -72,3 +72,11 @@ proconio = { version = "=0.5.0", features = ["derive"] }
 text_io = "=0.1.13"
 rustc-hash = "=2.1.1"
 smallvec = { version = "=1.15.1", features = ["const_generics", "const_new", "write", "union", "serde", "arbitrary"] }
+
+# Without this, cargo kani silently ignores kani::loop_invariant and unwinds forever.
+[package.metadata.kani.unstable]
+loop-contracts = true
+
+# Without this, cargo test warns about cfg(kani), which only cargo kani sets.
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ["cfg(kani)"] }

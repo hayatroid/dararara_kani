@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: cachix/install-nix-action@v31
+      - run: nix develop -c cargo test
+
+  kani:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # No nix: Kani uses its own nightly Rust, not the devShell's.
+      - uses: model-checking/kani-github-action@v1
+        with:
+          # Must match the version in .claude/hooks/session-start.sh.
+          kani-version: 0.68.0
