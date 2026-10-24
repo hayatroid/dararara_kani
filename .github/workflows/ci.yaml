@@ -20,4 +20,5 @@ jobs:
       # No nix: Kani uses its own nightly Rust, not the devShell's.
       - uses: model-checking/kani-github-action@v1
         with:
+          # Must match the version in .claude/hooks/session-start.sh.
           kani-version: 0.68.0
